@@ -25,24 +25,19 @@ function AddProduct() {
 
   useEffect(() => {
     axios.get(url).then(response => {
+      // setProduct(response.data.productsPage.products);
       setCategories(response.data.productsPage.categories);
-    })
-
-    axios.post(urlP, {
-      newP : product
-    }).then(response => {
-      setData(response.data);
     })
 
   }, []);
 
-  console.log(data)
+  // console.log(data)
 
   const productDetails = (key, value, test) => {
 
     if (key == 'pI') {
       setProduct({
-        [key]: test.files[0]
+        ...product, [key]: test.files[0]
       })
     } else {
       setProduct({
@@ -51,8 +46,11 @@ function AddProduct() {
     }
   }
 
-  const productAdded = () => {
+  // console.log(product)
 
+  const productAdded = () => {
+    const jsonObj = JSON.stringify(product);
+    localStorage.setItem("product", jsonObj);
 
 
   }
@@ -60,8 +58,6 @@ function AddProduct() {
   const submit = event => {
     event.preventDefault();
   }
-
-  console.log(product.length)
 
   return (
     <div className={classes.AddProduct}>
@@ -75,7 +71,7 @@ function AddProduct() {
               <h2>Add Product</h2>
               <div>
                 <p>Product Name</p>
-                <input id='pN' type={'text'}></input>
+                <input id='name' type={'text'}></input>
               </div>
               <div>
                 <p>Description</p>
@@ -83,7 +79,7 @@ function AddProduct() {
               </div>
               <div>
                 <p>Category</p>
-                <select id='cat'>
+                <select id='category'>
                   <option>Select category</option>
                   {categories != '' && categories.map(c => {
                     return <option>{c}</option>
@@ -93,11 +89,11 @@ function AddProduct() {
               <div>
                 <div>
                   <p>Expire Date</p>
-                  <input id='eD' type={'date'}></input>
+                  <input id='expireDate' type={'date'}></input>
                 </div>
                 <div>
                   <p>Units in Stock</p>
-                  <input id='uS' type={'number'}></input>
+                  <input id='stock' type={'number'}></input>
                 </div>
               </div>
             </div>
@@ -121,8 +117,13 @@ function AddProduct() {
             </div>
           </div>
         </form>
-        <button disabled={product.length <= 5 ? 'true' : 'false'} onClick={productAdded} className={classes.Addbutton}>
-          <Link to='/Products' style={{ 'textDecoration': 'none', 'color': 'whitesmoke' }}>ADD PRODUCT NOW</Link>
+        <button 
+        // disabled={product.length <= 5 ? 'true' : 'false'} 
+        onClick={productAdded} className={classes.Addbutton}>
+          <Link 
+          to='/Products' 
+          style={{ 'textDecoration': 'none', 'color': 'whitesmoke' }}
+          >ADD PRODUCT NOW</Link>
         </button>
         <Footer />
       </contextData>

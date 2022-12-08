@@ -30,36 +30,52 @@ function ProductDetails() {
 
   useEffect(() => {
     axios.get(url).then(response => {
-      setInfo(response.data.productsPage);
+      // setInfo(response.data.productsPage);
       setProduct(response.data.productsPage.products);
       setCategories(response.data.productsPage.categories);
     })
 
 
+    // console.log(localStorage.getItem("product"))
+    if(localStorage.getItem("product") != '') {
+
+      const str = localStorage.getItem("product");
+      const parsedObj = JSON.parse(str);
+      setInfo(parsedObj)
+      localStorage.setItem('product','');
+
+    }
+
+    
+    
     // axios.get(urlC).then(response => {
     //   // setInfo(response.data)
     //   // console.log(response)
     // })
-
+    
     // axios.get(urlP).then(response => {
-    //   // setInfo(response.data)
-    //   // console.log(response)
-    // })
-
+      //   // setInfo(response.data)
+      //   // console.log(response)
+      // })
+      
     // axios.post(urlC, {
     //   'product' : info,
     //   'categories' : categories
     // }).then(response => {
-    //   setInfo(response.data)
-    //   setProduct(response.data.product)
+      //   setInfo(response.data)
+      //   setProduct(response.data.product)
     //   setCategories(response.data.categories.categories)
     //   console.log('w')
     // })
-
+    
+    
+    
   }, []);
+  
+  // console.log(info);
 
   useEffect(() => {
-
+    
     // categories.push(categoriesNew)
 
     // setCategories(
@@ -79,11 +95,16 @@ function ProductDetails() {
 
 
 
-  console.log(product, categories);
+  // console.log(product, categories);
 
 
   if (product != '') {
 
+    // info && product.push([info]);    setProduct(product);
+    if(info) {
+      product.push(info)
+      console.log(product)
+    }
 
     var imgDelete = (delPname) => {
 
@@ -170,7 +191,7 @@ function ProductDetails() {
 
     }
 
-    console.log(categoriesNew)
+    // console.log(categoriesNew)
 
 
   }
@@ -235,7 +256,7 @@ function ProductDetails() {
         <div>
           {categories!='' && categories.map(c => {
             return <div className={classes.categoryBar}>
-              {console.log(categories)}
+              {/* {console.log(categories)} */}
               <p>{c}</p>
               {/* {categoriesNew != '' && categoriesNew.map(cat => {
                 return <p>{cat}</p>
