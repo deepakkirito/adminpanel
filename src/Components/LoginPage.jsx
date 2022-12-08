@@ -1,7 +1,7 @@
 import classes from '../Styles/LoginPage.module.scss';
-import Navbar from './Sub Components/Navbar'
-import LoginValidation from './Sub Components/LoginValidation'
-import Footer from './Sub Components/Footer'
+import Navbar from './Sub Components/Navbar.jsx'
+import LoginValidation from './Sub Components/LoginValidation.jsx'
+import Footer from './Sub Components/Footer.jsx'
 
 function Login() {
   return (
