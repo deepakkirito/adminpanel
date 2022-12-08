@@ -48,7 +48,6 @@
 }
 
 .Notification {
-  padding-right:10px;
 
     h2 {
         margin-left: 15px;
@@ -60,7 +59,9 @@
       overflow-x:hidden;
         height: 358px;
         scroll-behavior: smooth;
-        // scroll-margin-bottom: 20px;
+                        padding-right:0px;
+
+
         
         div {
             height: 120px;
@@ -69,6 +70,8 @@
             overflow: hidden;
             margin-bottom: 20px;
             background-color: rgba(107, 59, 88, 0.877);
+                  padding-right:0px;
+
 
             img{
                 width: 90px;
@@ -113,6 +116,8 @@
 
     table {
         margin-left: 25px;
+              margin-right: 25px;
+
         // border: none;
         // outline: none;
         text-align: center;
