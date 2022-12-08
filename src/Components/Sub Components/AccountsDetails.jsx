@@ -1,4 +1,4 @@
-import { clear } from '@testing-library/user-event/dist/clear';
+// import { clear } from '@testing-library/user-event/dist/clear';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import classes from '../../Styles/Sub Styles/AccountsDetails.module.scss';
