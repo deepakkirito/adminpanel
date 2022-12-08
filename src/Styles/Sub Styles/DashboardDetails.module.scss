@@ -48,6 +48,7 @@
 }
 
 .Notification {
+  padding-right:10px;
 
     h2 {
         margin-left: 15px;
@@ -56,6 +57,7 @@
     div {
         width: 100%;
         overflow: scroll;
+      overflow-x:hidden;
         height: 358px;
         scroll-behavior: smooth;
         // scroll-margin-bottom: 20px;

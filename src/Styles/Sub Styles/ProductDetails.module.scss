@@ -12,6 +12,7 @@ img {
 
     .left {
     margin-top:5%;
+      margin-left:5%;
     div {
         margin-top: 20px;
         border: 3px solid rgb(107, 59, 88);
@@ -162,10 +163,13 @@ img {
 }
 
 .right {
+   margin-top:6%;
+      margin-left:2.5%;
+   margin-right:2.5%;
     width: 23%;
     height: 100%;
-    // height: max-content;
-    // height: 50%;
+/*     // height: max-content; */
+/*     // height: 50%; */
     background-color: rgba(71, 32, 56, 0.824);
     border-radius: 5px;
 
@@ -176,12 +180,13 @@ img {
 
     div {
         margin-top: 30px;
+      margin-left:10px;
         // overflow: scroll;
 
         div {
             margin-top: 15px;
             text-align: left;
-            width: 80%;
+            width: 90%;
             border: 2px solid rgba(123, 90, 110, 0.92);
             display: grid;
             grid-template-columns: auto auto;
@@ -202,7 +207,7 @@ img {
                 width: 30px;
                 position: relative;
                 top: 5px;
-                left: 23px;
+                left: 20px;
                 box-shadow: 0px 0px 10px rgba(212, 178, 199, 0.815);
                 border: 2px solid rgb(225, 183, 208);
                 border-radius: 25px;
