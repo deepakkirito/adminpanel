@@ -167,3 +167,128 @@
     }
 }
 
+@media only screen and (min-width : 350px) and (max-width : 900px) {
+
+    .DashboardDetails {
+        display: flex;
+
+        div {
+            margin-left: 0px;
+            padding-left: 0px;
+            width: 90%;
+            // height: 2%;
+/*           overflow-y:hidden; */
+
+
+            div {
+                margin-left: 5px;
+/*               padding-right: 10px; */
+/*               padding-bottom:50px; */
+
+                h2 {
+                    font-size: 15px;
+                    margin: 0px;
+                    margin-left: 5px;
+
+                }
+
+                div {
+                    // width: 10px;
+                  div {
+                   overflow: scroll;           
+                  }
+                    
+/*               overflow: hidden; */
+/*                             overflow-x:hidden; */
+
+
+
+
+                    margin-left: 0px;
+
+                }
+            }
+        }
+
+        .Notification {
+            
+            h2 {
+                font-size: 15px;
+                margin-left: 5px;
+            }
+            
+            div {
+                height: auto;
+                margin-left: 5px;
+                margin-top: 2px;
+
+                div {
+                    height: auto;
+                    overflow: hidden;
+                    padding-right: 0px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-left: 5px;
+                        margin-top: 7px;
+                        margin-right: 2px;
+                    }
+
+                    div {
+                        height: auto;
+                        margin: 0;
+                        padding: 5px;
+
+                        p {
+                            font-size: 12px;
+                            margin-top: 10px;
+                            margin-left: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .Products {
+
+            h2 {
+                font-size: 15px;
+                margin-left: 5px;
+            }
+
+            table {
+                margin-left: 5px;
+
+                thead {
+
+                    tr {
+                        height: 20px;
+
+                        td {
+                            width: 100%;
+
+                            padding: 0px 7px;
+                            font-size: 6px;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        height: 20px;
+
+                        td {
+                            width: 100%;
+
+                            padding: 0px 0px;
+                            font-size: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
