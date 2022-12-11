@@ -225,7 +225,8 @@
 
                 div {
                     height: auto;
-                    overflow: hidden;
+                    overflow-x: hidden;
+                  overflow-y: scroll;
                     padding-right: 0px;
 
                     img {
